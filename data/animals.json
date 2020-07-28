@@ -108,6 +108,15 @@
         "loving"
       ],
       "id": "10"
+    },
+    {
+      "name": "James",
+      "species": "Turtle",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "goofy"
+      ],
+      "id": "11"
     }
   ]
 }
