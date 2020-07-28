@@ -8,6 +8,8 @@ const app =express();
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
 app.use(express.json());
+//uses all of the items in the public folder
+app.use(express.static('public'))
 
 function filteredByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
@@ -94,7 +96,20 @@ app.get('/api/animals/:id', (req, res) => {
   } else {
     res.send(404);
   }
-})
+});
+//runs the index html at http://localhost:3001
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//runs the animals html at http://localhost:3001/animals
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+//runs the zookeepers html at http://localhost:3001/zookeepers
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
 
 app.post('/api/animals', (req, res) => {
   //set id based on what the next index of the array will be
