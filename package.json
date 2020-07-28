@@ -1,0 +1,25 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "A catalog for animal enthusiasts to access data from different locations and browsers without needing to download it to their device.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaweisbrodtorres/zookeepr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuaweisbrodtorres/zookeepr/issues"
+  },
+  "homepage": "https://github.com/joshuaweisbrodtorres/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.1.0"
+  }
+}
